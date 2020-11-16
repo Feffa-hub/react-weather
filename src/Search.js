@@ -31,37 +31,48 @@ export default function Search() {
 
   return (
     <div>
-      <form onSubmit={getInput}>
+      <div>
+      <form
+      class="search-form"
+      onSubmit={getInput}>
         <input
-          type="search"
+          class="input-bar"
+          type="text"
           placeholder="Type a city"
-          autoFocus={true}
           onChange={updateQuery}
         />
-        <input type="submit" value="Search" />
+        <input type="submit" value="Go!" />
       </form>
+    </div>
       <div className="data-wrapper">
-      <div className="row">
-      <div className="col-6">
       <ul className="first-block">
-      <h3>{data.name}</h3>
-      <li>{data.temperature} °C</li>
+       <li>
+          <img src={data.icon} alt="" />
+        </li>
+      <span><li><h3>{data.name}</h3></li>
+      <li>{data.temperature} °C</li></span>
       <li>{data.description}</li>
       </ul>
       </div>
-        <div className="col-6">
-        <ul className="second-block">
-          <li>
-          <img src={data.icon} alt="" />
-        </li>
-        <li>humidity: {data.humidity} %</li>
-        <li>wind: {data.wind} km/h</li>
-      </ul>
-      </div>
+      <div className="row">
 
+  <div className="col-sm-6">
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title">Humidity</h5>
+        <p className="card-text">{data.humidity} %</p>
       </div>
+    </div>
+  </div>
+  <div className="col-sm-6">
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title">Wind</h5>
+        <p className="card-text">{data.wind} %</p>
       </div>
-      </div>
-    
+    </div>
+  </div>
+</div> 
+</div>   
   );
 }

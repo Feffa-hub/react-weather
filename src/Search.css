@@ -1,7 +1,18 @@
-form {
-  display: left;
+ul {
+  list-style: none;
+  text-align: center;
+  padding-inline-start: 0;
 }
 
-li {
-  list-style: none;
+form {
+  text-align: center;
+}
+
+.input-bar {
+  background: none;
+  border: none;
+}
+
+.search-form {
+  border-bottom: 2px solid black;
 }
