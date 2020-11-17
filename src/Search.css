@@ -9,10 +9,25 @@ form {
 }
 
 .input-bar {
-  background: none;
+  background: transparent;
   border: none;
+  outline: none;
+  margin-bottom: 5px;
+  border-bottom: 2px solid black;
+  text-align: left;
+  width: 70%;
+  margin-right: 15px;
 }
 
 .search-form {
-  border-bottom: 2px solid black;
+  font-family: "Jost", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  font-size: 22px;
+}
+
+.button-search {
+  background: transparent;
+  border: none;
+  outline: none;
+  size: 20px;
 }

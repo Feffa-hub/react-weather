@@ -33,15 +33,15 @@ export default function Search() {
     <div>
       <div>
       <form
-      class="search-form"
+      className="search-form"
       onSubmit={getInput}>
         <input
-          class="input-bar"
+          className="input-bar"
           type="text"
           placeholder="Type a city"
           onChange={updateQuery}
         />
-        <input type="submit" value="Go!" className="btn btn-primary" />
+      <input type="submit" value="Go" className="button-search"/>
       </form>
     </div>
       <div className="data-wrapper">
