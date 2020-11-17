@@ -41,7 +41,7 @@ export default function Search() {
           placeholder="Type a city"
           onChange={updateQuery}
         />
-        <input type="submit" value="Go!" />
+        <input type="submit" value="Go!" className="btn btn-primary" />
       </form>
     </div>
       <div className="data-wrapper">
