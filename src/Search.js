@@ -1,21 +1,27 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate"; 
 import axios from "axios";
-
 import "./Search.css";
 
 export default function Search() {
   
-  const [city, setCity] = useState("");
   const [data, setData] = useState({});
+  const [city, setCity] = useState("");
+  
 
   function currentWeather(response) {
+   
     setData({
+      
       name:response.data.name,
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      
+      
     });
   }
   
@@ -24,8 +30,8 @@ export default function Search() {
 
   function getInput(event) {
     event.preventDefault();
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ce32b21d52f4ecd35d6b654b98f2d394&units=metric`;
-axios.get(apiUrl).then(currentWeather);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ce32b21d52f4ecd35d6b654b98f2d394&units=metric`;
+  axios.get(apiUrl).then(currentWeather); 
 
   }
 
@@ -34,8 +40,9 @@ axios.get(apiUrl).then(currentWeather);
   }
   
 
+
   return (
-    <div>
+<div>
       <div>
       <form
       className="search-form"
@@ -77,8 +84,11 @@ axios.get(apiUrl).then(currentWeather);
       </div>
     </div>
   </div>
-</div> 
-</div>   
+ <div className="Date">
+  <FormattedDate date={data.date}/>
+  </div>
+</div>
+</div>
   );
 
 }
