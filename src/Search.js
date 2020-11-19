@@ -4,11 +4,11 @@ import axios from "axios";
 import "./Search.css";
  
 
-export default function Search() {
+export default function Search(props) {
   
   const [ready,setReady] = useState(false); 
   const [data, setData] = useState({});
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState(props.defaultCity);
   
   function weather(){
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ce32b21d52f4ecd35d6b654b98f2d394&units=metric`;
