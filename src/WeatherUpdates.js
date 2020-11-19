@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate"; 
+import "./WeatherUpdates.css"; 
 
 
 export default function WeatherUpdates(props){
@@ -10,9 +11,10 @@ return (
        <li>
           <img src={props.data.icon} alt="" />
         </li>
-      <span><li><h3>{props.data.name}</h3></li>
-      <li>{props.data.temperature} °C</li></span>
+      <li><h4>{props.data.name}</h4></li>
       <li>{props.data.description}</li>
+      <li className="temp">{props.data.temperature} °C</li>
+      
       </ul>
       </div>
       <div className="row">
@@ -25,7 +27,7 @@ return (
       </div>
     </div>
   </div>
-  <div className="col-sm-6">
+  <div className="col-sm-6" >
     <div className="card">
       <div className="card-body">
         <h5 className="card-title">Wind</h5>

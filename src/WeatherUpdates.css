@@ -1,0 +1,36 @@
+ul {
+  list-style: none;
+  text-align: center;
+  padding-inline-start: 0;
+}
+
+.data-wrapper {
+  margin-top: 20px;
+  color: white;
+}
+
+li.temp {
+  margin-top: 25px;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.col-sm-6 {
+  margin-top: 20px;
+}
+
+.card-body {
+  background-color: #e4e3e3;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.card-title {
+  color: black;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+
+.card-text {
+  color: black;
+}
