@@ -1,4 +1,5 @@
 import React from "react";
+import FormattedDate from "./FormattedDate"; 
 
 
 export default function WeatherUpdates(props){
@@ -32,6 +33,7 @@ return (
       </div>
     </div>
   </div>
+  <FormattedDate date={props.data.date}/>
 </div>
 </div>
 

@@ -6,15 +6,18 @@ import "./Search.css";
 
 export default function Search() {
   
-  
+  const [ready,setReady] = useState(false); 
   const [data, setData] = useState({});
   const [city, setCity] = useState("");
   
+  function weather(){
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ce32b21d52f4ecd35d6b654b98f2d394&units=metric`;
+  axios.get(apiUrl).then(currentWeather);
+  }
 
   function getInput(event) {
     event.preventDefault();
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ce32b21d52f4ecd35d6b654b98f2d394&units=metric`;
-  axios.get(apiUrl).then(currentWeather);
+    weather(); 
   }
 
   function updateQuery(event) {
@@ -26,19 +29,18 @@ export default function Search() {
        
       name:response.data.name,
       temperature: Math.round(response.data.main.temp),
-      date: "Wednesday",
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      
+      date: new Date(response.data.dt * 1000)
       
     });
 
-
+  setReady(true);
   }
 
-  
+  if (ready){
   
   return (
 
@@ -57,5 +59,8 @@ export default function Search() {
       <WeatherUpdates data={data}/>
       </div>
   );
-
+} else {
+  weather();
+  return "Loading"; 
+}
 }
