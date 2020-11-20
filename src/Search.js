@@ -3,6 +3,7 @@ import WeatherUpdates from "./WeatherUpdates";
 import axios from "axios";
 import "./Search.css";
  
+ 
 
 export default function Search(props) {
   
@@ -32,7 +33,7 @@ export default function Search(props) {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000)
       
     });

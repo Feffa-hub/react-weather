@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate"; 
+import WeatherAnimated from "./WeatherAnimated"; 
 import "./WeatherUpdates.css"; 
 
 
@@ -9,7 +10,7 @@ return (
       <div className="data-wrapper">
       <ul className="first-block">
        <li>
-          <img src={props.data.icon} alt="" />
+       <WeatherAnimated code={props.data.icon}/>
         </li>
       <li><h4>{props.data.name}</h4></li>
       <li>{props.data.description}</li>
