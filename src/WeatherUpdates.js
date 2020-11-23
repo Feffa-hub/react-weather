@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate"; 
 import WeatherAnimated from "./WeatherAnimated"; 
+import CurrentTemperature from "./CurrentTemperature"; 
 import "./WeatherUpdates.css"; 
 
 
@@ -14,7 +15,9 @@ return (
         </li>
       <li><h4>{props.data.name}</h4></li>
       <li>{props.data.description}</li>
-      <li className="temp">{props.data.temperature} °C</li>
+      <li className="temp">
+        <CurrentTemperature celsius={props.data.temperature}/>
+        </li>
       
       </ul>
       </div>
