@@ -1,5 +1,5 @@
 import React, {useState} from "react"; 
-import WeatherAnimated from "./WeatherAnimated"; 
+import ForecastData from "./ForecastData";
 import axios from "axios"; 
 import "./Forecast.css";
 
@@ -22,11 +22,13 @@ if(check){
 return (
 
     <div className="forecast-temperature row">
-    <div className="col">
-    {new Date(forecast.list[0].dt*1000).getHours()}:00
-    <WeatherAnimated code={forecast.list[0].weather[0].icon}/>
-    {Math.round(forecast.list[0].main.temp)}°C
-    </div>
+
+    <ForecastData data={forecast.list[0]}/>
+    <ForecastData data={forecast.list[1]}/>
+    <ForecastData data={forecast.list[2]}/>
+    <ForecastData data={forecast.list[3]}/>
+    <ForecastData data={forecast.list[4]}/>
+    <ForecastData data={forecast.list[5]}/>
     </div>
 );
 }else{
