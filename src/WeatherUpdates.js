@@ -1,6 +1,7 @@
 import React from "react";
 import WeatherAnimated from "./WeatherAnimated"; 
 import CurrentTemperature from "./CurrentTemperature"; 
+import Forecast from "./Forecast"; 
 import FormattedDate from "./FormattedDate"; 
 import "./WeatherUpdates.css"; 
 
@@ -44,6 +45,9 @@ return (
   <h5>Last update:</h5>
   <FormattedDate date={props.data.date}/>
   </div>
+<div class="forecast-temperature">
+<Forecast city={props.data.name}/>
+</div>
 </div>
 
 );
