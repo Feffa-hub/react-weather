@@ -1,7 +1,7 @@
 import React from "react";
-import FormattedDate from "./FormattedDate"; 
 import WeatherAnimated from "./WeatherAnimated"; 
 import CurrentTemperature from "./CurrentTemperature"; 
+import FormattedDate from "./FormattedDate"; 
 import "./WeatherUpdates.css"; 
 
 
@@ -39,10 +39,12 @@ return (
       </div>
     </div>
   </div>
+</div>
+<div className="current-date">
+  <h5>Last update:</h5>
   <FormattedDate date={props.data.date}/>
+  </div>
 </div>
-</div>
-
 
 );
 }

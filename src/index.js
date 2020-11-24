@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import "./Forecast.css"; 
 import App from './App';
+import Forecast from "./Forecast.js"; 
 import Footer from "./Footer.js";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Forecast />
     <Footer />
   </React.StrictMode>,
   document.getElementById('root')

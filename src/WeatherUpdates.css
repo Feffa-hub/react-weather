@@ -34,3 +34,8 @@ li.temp {
 .card-text {
   color: black;
 }
+
+.current-date {
+  margin-top: 60px;
+  text-align: right;
+}
