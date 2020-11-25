@@ -30,7 +30,7 @@ return(
 <ReactAnimatedWeather
 icon={match[props.code]}
 color="white"
-size="80"
+size="70"
 animate= {true}
 />
 );

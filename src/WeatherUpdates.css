@@ -19,10 +19,14 @@ li.temp {
   margin-top: 20px;
 }
 
+.card {
+  opacity: 90%;
+}
+
 .card-body {
   background-color: #e4e3e3;
   padding: 0.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .card-title {
@@ -36,6 +40,8 @@ li.temp {
 }
 
 .current-date {
-  margin-top: 60px;
+  margin-top: 50px;
+  padding-top: 20px;
   text-align: right;
+  border-top: 1px solid #393e46;
 }

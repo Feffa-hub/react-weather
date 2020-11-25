@@ -42,7 +42,6 @@ return (
   </div>
 </div>
 <div className="current-date">
-  <h5>Last update:</h5>
   <FormattedDate date={props.data.date}/>
   </div>
 <div class="forecast-temperature">

@@ -1,13 +1,7 @@
 .forecast-temperature canvas {
-  display: block;
+  width: 55px;
 }
 
-forecast-temperature row {
-  display: block;
-  margin: 0 auto;
-}
-
-forecast-data col {
-  display: block;
-  margin: 0 auto;
+.forecast-temperature {
+  margin-top: 30px;
 }

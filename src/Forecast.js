@@ -27,8 +27,7 @@ return (
     <ForecastData data={forecast.list[1]}/>
     <ForecastData data={forecast.list[2]}/>
     <ForecastData data={forecast.list[3]}/>
-    <ForecastData data={forecast.list[4]}/>
-    <ForecastData data={forecast.list[5]}/>
+
     </div>
 );
 }else{
