@@ -12,7 +12,7 @@ export default function ForecastData(props){
  function temperature() {
     let temperature = Math.round(props.data.main.temp_max);
 
-    return `${temperature}°C`;
+    return `${temperature} °C`;
   }
 
 

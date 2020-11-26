@@ -56,7 +56,7 @@ export default function Search(props) {
           placeholder="Type a city"
           onChange={updateQuery}
         />
-      <input type="submit" value="Go" className="button-search"/>
+      <input type="submit" value="Go!" className="button-search"/>
       </form>
       <WeatherUpdates data={data}/>
       </div>

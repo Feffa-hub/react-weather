@@ -14,8 +14,8 @@ return (
        <li>
        <WeatherAnimated code={props.data.icon}/>
         </li>
-      <li><h4>{props.data.name}</h4></li>
-      <li>{props.data.description}</li>
+      <li className="name">{props.data.name}</li>
+      <li className="description">{props.data.description}</li>
       <li className="temp">
         <CurrentTemperature celsius={props.data.temperature}/>
         </li>

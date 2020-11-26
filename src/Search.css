@@ -6,12 +6,15 @@ form {
   background: transparent;
   border: none;
   outline: none;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   border-bottom: 2px solid white;
+  border-left: 2px solid white;
   text-align: left;
-  width: 70%;
-  margin-right: 15px;
+  width: 60%;
+  margin-right: 35px;
   color: white;
+  padding-bottom: 5px;
+  padding-left: 10px;
 }
 
 .search-form {
@@ -21,8 +24,12 @@ form {
 
 .button-search {
   background: transparent;
-  border: none;
   outline: none;
   size: 20px;
   color: white;
+  border-bottom: black;
+  border-top: solid 2px white;
+  border-left: black;
+  border-right: solid 2px white;
+  padding: 10px 10px;
 }
