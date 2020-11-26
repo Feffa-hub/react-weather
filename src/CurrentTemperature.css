@@ -1,16 +1,15 @@
 a {
   color: grey;
-  text-decoration: none;
 }
 
 a:hover {
   color: grey;
-  text-decoration: none;
 }
 
 .unit {
   position: relative;
   top: -20px;
   left: 10px;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: 550;
 }

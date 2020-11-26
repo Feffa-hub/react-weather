@@ -12,46 +12,50 @@ ul {
 li.name {
   font-size: 37px;
   font-weight: 550;
+  letter-spacing: 1.5px;
 }
 
 li.description {
   font-size: 15px;
   font-style: italic;
+  color: grey;
 }
 
 li.temp {
   margin-top: 25px;
-  font-size: 35px;
-  font-weight: 500;
+  font-size: 50px;
 }
 
-.col-sm-6 {
-  margin-top: 20px;
+.col-6 {
+  text-align: center;
+  margin-top: 40px;
 }
 
-.card {
-  opacity: 90%;
+.divider-wind {
+  border-left: solid 2px grey;
 }
 
-.card-body {
-  background-color: #e4e3e3;
-  padding: 0.5rem;
-  text-align: left;
+.hum-text {
+  font-style: italic;
+  color: grey;
+}
+.wind-text {
+  font-style: italic;
+  color: grey;
 }
 
-.card-title {
-  color: black;
-  margin-bottom: 0;
-  font-weight: 800;
+.hum-title {
+  font-weight: 600;
 }
 
-.card-text {
-  color: black;
+.wind-title {
+  font-weight: 600;
 }
 
 .current-date {
   margin-top: 50px;
   padding-top: 20px;
-  text-align: right;
+  text-align: end;
   border-top: 1px solid #393e46;
+  font-style: italic;
 }

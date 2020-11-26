@@ -22,23 +22,18 @@ return (
       
       </ul>
       </div>
-      <div className="row">
-
-  <div className="col-sm-6">
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">Humidity</h5>
-        <p className="card-text">{props.data.humidity} %</p>
-      </div>
-    </div>
+      <div className="hum-wind row">
+  <div className="col-6">
+    <div className="divider-hum">
+        <h5 className="hum-title">Humidity</h5>
+        <p className="hum-text">{Math.round(props.data.humidity)} %</p>
   </div>
-  <div className="col-sm-6" >
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">Wind</h5>
-        <p className="card-text">{props.data.wind} %</p>
-      </div>
-    </div>
+  </div>
+  <div className="col-6" >
+  <div className="divider-wind">
+        <h5 className="wind-title">Wind</h5>
+        <p className="wind-text">{Math.round(props.data.wind)} km/h</p>
+  </div>
   </div>
 </div>
 <div className="current-date">
