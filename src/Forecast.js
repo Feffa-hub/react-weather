@@ -23,10 +23,10 @@ return (
 
     <div className="forecast-temperature row">
 
-    <ForecastData data={forecast.list[0]}/>
-    <ForecastData data={forecast.list[1]}/>
-    <ForecastData data={forecast.list[2]}/>
-    <ForecastData data={forecast.list[3]}/>
+    <ForecastData info={forecast.list[0]}/>
+    <ForecastData info={forecast.list[1]}/>
+    <ForecastData info={forecast.list[2]}/>
+    <ForecastData info={forecast.list[3]}/>
 
     </div>
 );
