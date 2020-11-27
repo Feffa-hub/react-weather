@@ -1,11 +1,12 @@
-.forecast-temperature canvas {
-  width: 55px;
-}
-
 .forecast-temperature {
   margin-top: 30px;
 }
 
 p {
   color: grey;
+}
+
+.forecast-temperature canvas {
+  display: block;
+  width: 50px;
 }

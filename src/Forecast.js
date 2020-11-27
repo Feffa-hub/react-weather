@@ -42,7 +42,12 @@ return (
           {new Date(forecast.list[3].dt * 1000).getHours()}:00
           <WeatherAnimated code={forecast.list[3].weather[0].icon} />
           <p>{Math.round(forecast.list[3].main.temp)} °C</p>
-        </div>
+          </div>
+          <div className="col">
+          {new Date(forecast.list[4].dt * 1000).getHours()}:00
+          <WeatherAnimated code={forecast.list[4].weather[0].icon} />
+          <p>{Math.round(forecast.list[4].main.temp)} °C</p>
+          </div>
         </div>
 
 
