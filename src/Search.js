@@ -1,7 +1,10 @@
 import React, { useState } from "react"; 
 import WeatherUpdates from "./WeatherUpdates"; 
 import axios from "axios";
+import Loader from 'react-loader-spinner'
+import { FaRegPaperPlane} from "react-icons/fa";
 import "./Search.css";
+
 
  
  
@@ -56,13 +59,23 @@ export default function Search(props) {
           placeholder="Type a city"
           onChange={updateQuery}
         />
-      <input type="submit" value="Go!" className="button-search"/>
+      <button type="submit" className="button-search"><FaRegPaperPlane/></button>
       </form>
       <WeatherUpdates data={data}/>
       </div>
   );
 } else {
   weather();
-  return "Loading"; 
+  return(
+  <Loader
+         type="ThreeDots"
+         color="white"
+         height={100}
+         width={100}
+         className="loader"
+         
+ 
+      />
+  ); 
 }
 }

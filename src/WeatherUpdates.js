@@ -3,6 +3,8 @@ import WeatherAnimated from "./WeatherAnimated";
 import CurrentTemperature from "./CurrentTemperature"; 
 import Forecast from "./Forecast"; 
 import FormattedDate from "./FormattedDate"; 
+import { WiHumidity} from "react-icons/wi";
+import { FaWind } from "react-icons/fa"; 
 import "./WeatherUpdates.css"; 
 
 
@@ -25,13 +27,13 @@ return (
       <div className="hum-wind row">
   <div className="col-6">
     <div className="divider-hum">
-        <h5 className="hum-title">Humidity</h5>
+    <h5 className="hum-title">Humidity <WiHumidity/></h5>
         <p className="hum-text">{Math.round(props.data.humidity)} %</p>
   </div>
   </div>
   <div className="col-6" >
   <div className="divider-wind">
-        <h5 className="wind-title">Wind</h5>
+        <h5 className="wind-title">Wind <FaWind/></h5>
         <p className="wind-text">{Math.round(props.data.wind)} km/h</p>
   </div>
   </div>

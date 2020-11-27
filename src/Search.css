@@ -33,3 +33,7 @@ form {
   border-right: solid 2px white;
   padding: 10px 10px;
 }
+
+.loader {
+  text-align: center;
+}
