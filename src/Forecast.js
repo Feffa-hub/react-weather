@@ -1,7 +1,7 @@
 import React, {useState} from "react"; 
-import ForecastData from "./ForecastData";
 import axios from "axios"; 
 import "./Forecast.css";
+import WeatherAnimated from "./WeatherAnimated"; 
 
 
 
@@ -17,18 +17,35 @@ setCheck(true);
 
 }
 
-if(check){
+if(check && props.city === forecast.city.name){
 
 return (
 
     <div className="forecast-temperature row">
+    
+        <div className="col">
+          {new Date(forecast.list[0].dt * 1000).getHours()}:00
+          <WeatherAnimated code={forecast.list[0].weather[0].icon} />
+          <p>{Math.round(forecast.list[0].main.temp)} °C</p>
+        </div>
+        <div className="col">
+          {new Date(forecast.list[1].dt * 1000).getHours()}:00
+          <WeatherAnimated code={forecast.list[1].weather[0].icon} />
+          <p>{Math.round(forecast.list[1].main.temp)} °C</p>
+        </div>
+        <div className="col">
+          {new Date(forecast.list[2].dt * 1000).getHours()}:00
+          <WeatherAnimated code={forecast.list[2].weather[0].icon} />
+          <p>{Math.round(forecast.list[2].main.temp)} °C</p>
+        </div>
+        <div className="col">
+          {new Date(forecast.list[3].dt * 1000).getHours()}:00
+          <WeatherAnimated code={forecast.list[3].weather[0].icon} />
+          <p>{Math.round(forecast.list[3].main.temp)} °C</p>
+        </div>
+        </div>
 
-    <ForecastData info={forecast.list[0]}/>
-    <ForecastData info={forecast.list[1]}/>
-    <ForecastData info={forecast.list[2]}/>
-    <ForecastData info={forecast.list[3]}/>
 
-    </div>
 );
 }else{
 
